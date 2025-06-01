@@ -173,7 +173,7 @@ export class VideoLinks {
       for (const source of sources) {
         const decryptedBase64 = source.src.replace(/[a-zA-Z]/g, e => {
           let eCharCode = e.charCodeAt(0);
-          return String.fromCharCode((eCharCode <= zCharCode ? 90 : 122) >= (eCharCode = eCharCode + 13) ? eCharCode : eCharCode - 26);
+          return String.fromCharCode((eCharCode <= zCharCode ? 90 : 122) >= (eCharCode = eCharCode + 18) ? eCharCode : eCharCode - 26);
         });
         source.src = atob(decryptedBase64);
       }
